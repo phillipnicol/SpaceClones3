@@ -10,7 +10,7 @@ Open R console and run `devtools::install_github("phillipnicol/SpaceClones3")`.
 ## Input 
 
 All that is needed a gene expression data frame `X` and a spatial weights matrix `D`. The rows of `X` corresponds to sites and the columns are genes. Entries in `X` should be the log2 fold change
-of that gene compared to the mean expression of the control sample. The square matrix `D` gives the spatial weights between cells. In the paper I suggest using the inverse of the
+of that gene compared to the mean expression of the control sample. `X` should only contain cells/sites which are believed to be cancer. The square matrix `D` gives the spatial weights between cells. In the paper I suggest using the inverse of the
 squared Euclidean distance between the two cells, but symmetric measure can be used here. The remaining optional arguments pertain to cutoffs described in the paper (none of these will make sense if you haven't read the paper, just use the default values). 
 
 ## Output 
