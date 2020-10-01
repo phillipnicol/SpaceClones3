@@ -15,4 +15,4 @@ squared Euclidean distance between the two cells, but symmetric measure can be u
 
 ## Output 
 
-The output is an object of class [Mercator](https://CRAN.R-project.org/package=Mercator). Of particular interest will be `out$clusters` which gives an assignment of genes to subclones. 
+The output is an object of class [Mercator](https://CRAN.R-project.org/package=Mercator). Of particular interest will be `out$clusters` which gives an assignment of genes to subclones. The default clustering algorithm is t-SNE and the default metric is Euclidean but different options are available with Mercator. 
