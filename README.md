@@ -4,6 +4,9 @@ This is an R package which implements a statistical procedure for finding tumor 
 This method is described in a conference paper (which will be available soon). This is currently a very minimal 
 R package containing a minimal implementation of the algorithm. If there is interest, I would be happy to improve the code and documentation. 
 
+## Installation 
+Open R console and run `devtools::install_github("phillipnicol/SpaceClones3")`. 
+
 ## Input 
 
 All that is needed a gene expression data frame `X` and a spatial weights matrix `D`. The rows of `X` corresponds to sites and the columns are genes. Entries in `X` should be the log2 fold change
@@ -12,4 +15,4 @@ squared Euclidean distance between the two cells, but symmetric measure can be u
 
 ## Output 
 
-The output is an object of class [Mercator](https://CRAN.R-project.org/package=Mercator). Of particular interest will be `out$clusters` which gives an assignment of genes to clones. 
+The output is an object of class [Mercator](https://CRAN.R-project.org/package=Mercator). Of particular interest will be `out$clusters` which gives an assignment of genes to subclones. 
