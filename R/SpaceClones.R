@@ -48,7 +48,7 @@ SpaceClones3 <- function(X, D, fc_cutoff = log(3/2,base=2),
   pvals <- c()
 
   if(nrow(my.binmat) == 0) {
-    stop("No autocorrelated genes found.")
+    stop("No autocorrelated genes found. No subclones detected.")
   }
 
   for(i in 1:nrow(my.binmat)) {
@@ -120,6 +120,10 @@ SpaceClones3 <- function(X, D, fc_cutoff = log(3/2,base=2),
   lengths <- sapply(subclones, function(x) length(x))
 
   M <- matrix(0, nrow = nrow(my.data), ncol = nrow(my.data))
+
+  if(nrow(M) == 0) {
+    stop("No clique above min_clique_size. No subclones detected.")
+  }
 
   for(i in 1:nrow(M)) {
     M[i,subclones[[i]] ] <- 1
