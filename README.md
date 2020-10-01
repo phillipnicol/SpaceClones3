@@ -2,7 +2,7 @@
 
 This is an R package which implements a statistical procedure for finding tumor subclones from spatially resolved RNA-seq data (i.e., spatial transcriptomics, Slide-seq, FISH).
 This method is described in a conference paper (which will be available soon). This is currently a very minimal 
-R package containing a minimal implementation of the algorithm. If there is interest, I would be happy to improve the code and documentation. 
+R package containing an implementation of the algorithm. If there is interest, I would be happy to improve the code and documentation. 
 
 ## Installation 
 Open R console and run `devtools::install_github("phillipnicol/SpaceClones3")`. 
